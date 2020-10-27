@@ -25,4 +25,9 @@ public class ExampleController {
     public String put(@RequestBody final String example) {
         return example;
     }
+
+    @DeleteMapping("/remove")
+    public boolean delete(@RequestBody final String example) {
+        return true;
+    }
 }
