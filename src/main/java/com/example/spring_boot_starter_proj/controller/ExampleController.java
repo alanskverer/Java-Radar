@@ -12,7 +12,7 @@ public class ExampleController {
     @Autowired
     private ExampleProvider exampleProvider;
 
-    @RequestMapping(method = RequestMethod.GET, value = "/api/get")
+    @RequestMapping(method = RequestMethod.GET, value = "/api/index")
     public String index() {
         return exampleProvider.index();
     }
