@@ -1,14 +1,14 @@
-package com.example.spring_boot_starter_proj.model;
+package com.compie.webstarter.model.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-@Entity(name = "User")
-public class User {
+@Entity(name = "example")
+public class Example {
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
+    @GeneratedValue(strategy= GenerationType.AUTO)
     private Integer id;
 
     private String name;

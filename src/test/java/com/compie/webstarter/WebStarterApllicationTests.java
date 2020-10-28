@@ -1,13 +1,14 @@
-package com.example.spring_boot_starter_proj;
+package com.compie.webstarter;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DemoApplicationTests {
+class WebStarterApllicationTests {
 
 	@Test
 	void contextLoads() {
 	}
 
 }
+
