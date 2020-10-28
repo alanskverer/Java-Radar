@@ -11,6 +11,4 @@ public class WebStarterApplication {
 		SpringApplication.run(WebStarterApplication.class, args);
 	}
 
-//	@Bean
-
 }
