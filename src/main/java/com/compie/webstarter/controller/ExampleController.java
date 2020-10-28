@@ -3,18 +3,15 @@ package com.compie.webstarter.controller;
 import com.compie.webstarter.model.domain.Example;
 import com.compie.webstarter.provider.ExampleProvider;
 import io.swagger.annotations.ApiOperation;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequiredArgsConstructor
 @RequestMapping("/v1/example")
 public class ExampleController {
 
     private final ExampleProvider exampleProvider;
-
-    public ExampleController(final ExampleProvider exampleProvider) {
-        this.exampleProvider = exampleProvider;
-    }
 
     @GetMapping
     public String get() {
