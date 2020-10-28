@@ -2,7 +2,6 @@ package com.compie.webstarter.controller;
 
 import com.compie.webstarter.model.domain.Example;
 import com.compie.webstarter.provider.ExampleProvider;
-import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,14 +17,13 @@ public class ExampleController {
         return exampleProvider.getExample();
     }
 
-    @ApiOperation(value = "Example", nickname = "exmpl", notes="creating a new Example")
     @PostMapping()
     public Example post(@RequestParam final String name, @RequestParam final String email) {
-        Example exmpl = new Example();
-        exmpl.setName(name);
-        exmpl.setEmail(email);
-        exampleProvider.createNew(exmpl);
-        return exmpl;
+        Example example = new Example();
+        example.setName(name);
+        example.setEmail(email);
+        exampleProvider.createNew(example);
+        return example;
     }
 
     @PutMapping()
