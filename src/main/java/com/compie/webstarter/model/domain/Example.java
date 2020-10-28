@@ -9,7 +9,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Data
-@EqualsAndHashCode
 @Entity(name = "example")
 public class Example {
     @Id
