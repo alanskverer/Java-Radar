@@ -2,8 +2,6 @@ package com.compie.webstarter.provider;
 
 import com.compie.webstarter.model.domain.Example;
 import com.compie.webstarter.service.ExampleService;
-
-import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
