@@ -1,11 +1,13 @@
 package com.compie.webstarter.model.domain;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.Data;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+@Tag(name = "Example Entity")
 @Data
 @Entity(name = "example")
 public class Example {
