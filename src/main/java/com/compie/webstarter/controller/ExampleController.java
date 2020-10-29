@@ -18,7 +18,7 @@ public class ExampleController {
 
     @GetMapping
     public String get() {
-        log.info("Example log from ExampleController", ExampleController.class.getSimpleName());
+        log.info("Example log from ExampleController");
         return exampleProvider.getExample();
     }
 
