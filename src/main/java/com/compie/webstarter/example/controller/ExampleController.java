@@ -1,5 +1,6 @@
 package com.compie.webstarter.example.controller;
 
+import com.compie.webstarter.example.model.dto.ExampleRequestDto;
 import com.compie.webstarter.example.model.dto.ExampleResponseDto;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.validation.annotation.Validated;
@@ -17,5 +18,5 @@ public interface ExampleController {
     List<ExampleResponseDto> get();
 
     @PostMapping()
-    ExampleResponseDto post(@RequestParam final String name, @RequestParam final String email);
+    ExampleResponseDto post(@RequestBody ExampleRequestDto exampleRequestDto);
 }

@@ -1,15 +1,14 @@
 package com.compie.webstarter.example.controller;
 
 import com.compie.webstarter.example.model.domain.Example;
+import com.compie.webstarter.example.model.dto.ExampleRequestDto;
 import com.compie.webstarter.example.model.dto.ExampleResponseDto;
 import com.compie.webstarter.example.service.ExampleService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -35,10 +34,10 @@ public class ExampleControllerImpl implements ExampleController {
     }
 
     @PostMapping()
-    public ExampleResponseDto post(@RequestParam final String name, @RequestParam final String email) {
+    public ExampleResponseDto post(@Valid @RequestBody final ExampleRequestDto exampleRequestDto) {
         Example example = Example.builder()
-                .name(name)
-                .email(email)
+                .name(exampleRequestDto.getName())
+                .email(exampleRequestDto.getEmail())
                 .build();
         final Example savedExample = exampleService.createNew(example);
         return ExampleResponseDto.builder()
