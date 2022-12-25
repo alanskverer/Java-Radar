@@ -11,5 +11,7 @@ public interface ExampleRepository extends CrudRepository<Example, Integer> {
 
     List<Example> findAll();
 
+
+
     Example save(Example example);
 }

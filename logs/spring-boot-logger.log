@@ -1,0 +1,7 @@
+2022-12-25 09:55:40,165 INFO com.compie.webstarter.example.controller.UserControllerImpl [http-nio-8080-exec-8] User log from UserController
+2022-12-25 09:55:40,170 INFO com.compie.webstarter.example.service.UserServiceImpl [http-nio-8080-exec-8] getting user
+2022-12-25 09:55:40,196 INFO com.compie.webstarter.example.controller.UserControllerImpl [http-nio-8080-exec-8] getUser response: [User(id=14, password=123456, email=ffeeef@gmail.com, name=farruko), User(id=15, password=@callmeJSON007, email=heyjson@example.com, name=JSON), User(id=16, password=@callmeJSON007, email=dsa, name=JSON), User(id=17, password=@callmeJSON007, email=12, name=JSON)]
+2022-12-25 09:56:10,639 INFO com.compie.webstarter.example.service.UserServiceImpl [http-nio-8080-exec-9] creating new user
+2022-12-25 09:56:14,407 INFO com.compie.webstarter.example.controller.UserControllerImpl [http-nio-8080-exec-10] User log from UserController
+2022-12-25 09:56:14,407 INFO com.compie.webstarter.example.service.UserServiceImpl [http-nio-8080-exec-10] getting user
+2022-12-25 09:56:14,414 INFO com.compie.webstarter.example.controller.UserControllerImpl [http-nio-8080-exec-10] getUser response: [User(id=14, password=123456, email=ffeeef@gmail.com, name=farruko), User(id=15, password=@callmeJSON007, email=heyjson@example.com, name=JSON), User(id=16, password=@callmeJSON007, email=dsa, name=JSON), User(id=17, password=@callmeJSON007, email=12, name=JSON), User(id=18, password=@callmeJSON007, email=ooo@gmaol.com, name=WWOOOW)]

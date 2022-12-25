@@ -9,7 +9,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Slf4j
@@ -18,6 +18,16 @@ import java.util.stream.Collectors;
 public class ExampleControllerImpl implements ExampleController {
 
     private final ExampleService exampleService;
+
+    @RequestMapping("/alan")
+    public ExampleResponseDto getTest() {
+        Example ex = new Example(3,"Alan","wow@gmail.comm");
+        final Example savedExample = exampleService.createNew(ex);
+        return ExampleResponseDto.builder()
+                .name(savedExample.getName())
+                .email(savedExample.getEmail())
+                .build();
+    }
 
     @GetMapping
     public List<ExampleResponseDto> get() {
@@ -33,16 +43,16 @@ public class ExampleControllerImpl implements ExampleController {
                 .collect(Collectors.toList());
     }
 
-    @PostMapping()
-    public ExampleResponseDto post(@Valid @RequestBody final ExampleRequestDto exampleRequestDto) {
-        Example example = Example.builder()
-                .name(exampleRequestDto.getName())
-                .email(exampleRequestDto.getEmail())
-                .build();
-        final Example savedExample = exampleService.createNew(example);
-        return ExampleResponseDto.builder()
-                .name(savedExample.getName())
-                .email(savedExample.getEmail())
-                .build();
-    }
+//    @PostMapping()
+//    public ExampleResponseDto post(@Valid @RequestBody final ExampleRequestDto exampleRequestDto) {
+//        Example example = Example.builder()
+//                .name(exampleRequestDto.getName())
+//                .email(exampleRequestDto.getEmail())
+//                .build();
+//        final Example savedExample = exampleService.createNew(example);
+//        return ExampleResponseDto.builder()
+//                .name(savedExample.getName())
+//                .email(savedExample.getEmail())
+//                .build();
+//    }
 }
